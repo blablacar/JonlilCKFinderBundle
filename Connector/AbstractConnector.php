@@ -111,7 +111,7 @@ abstract class AbstractConnector
 
         $GLOBALS['config']['ResourceType'][] = Array(
             'name' => 'Files',				// Single quotes not allowed
-            'url' => $this->parameters['baseUrl'] . 'files',
+            'url' => $this->request->getBasePath().$this->parameters['baseUrl'] . 'files',
             'directory' => $this->parameters['baseDir'] . $this->parameters['baseUrl'] . 'files',
             'maxSize' => 0,
             'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
@@ -120,7 +120,7 @@ abstract class AbstractConnector
 
         $GLOBALS['config']['ResourceType'][] = Array(
             'name' => 'Images',
-            'url' => $this->parameters['baseUrl'] . 'images',
+            'url' => $this->request->getBasePath().$this->parameters['baseUrl'] . 'images',
             'directory' => $this->parameters['baseDir'] . $this->parameters['baseUrl'] . 'images',
             'maxSize' => 0,
             'allowedExtensions' => 'bmp,gif,jpeg,jpg,png',
@@ -129,7 +129,7 @@ abstract class AbstractConnector
 
         $GLOBALS['config']['ResourceType'][] = Array(
             'name' => 'Flash',
-            'url' => $this->parameters['baseUrl'] . 'flash',
+            'url' => $this->request->getBasePath().$this->parameters['baseUrl'] . 'flash',
             'directory' => $this->parameters['baseDir'] . $this->parameters['baseUrl'] . 'flash',
             'maxSize' => 0,
             'allowedExtensions' => 'swf,flv',
