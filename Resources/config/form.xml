@@ -9,7 +9,7 @@
     </parameters>
 
     <services>
-        <service id="form.type.ckfinder" class="%form.type.ckfinder.class%">
+        <service id="form.type.ckfinder" class="%form.type.ckfinder.class%" scope="request">
             <argument type="service" id="ivory_ck_editor.config_manager" />
             <argument type="service" id="ivory_ck_editor.plugin_manager" />
             <tag name="form.type" alias="ckfinder" />

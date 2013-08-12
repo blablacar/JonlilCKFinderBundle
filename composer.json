@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "egeloen/ckeditor-bundle": "2.1.2",
+        "egeloen/ckeditor-bundle": "2.1.5",
         "php": ">=5.3.0",
         "symfony/framework-bundle": ">=2.1",
         "jonlil/ckfinder": "2.3.1"
@@ -19,5 +19,5 @@
         "psr-0": { "Jonlil\\CKFinderBundle": "" }
     },
     "target-dir": "Jonlil/CKFinderBundle",
-    "version": "0.0.1"
+    "version": "2.1.5"
 }
