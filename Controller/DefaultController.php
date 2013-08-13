@@ -24,7 +24,7 @@ class DefaultController extends Controller
 
     public function connectorAction (Request $request)
     {
-        return new Response('funka');
+        return new Response();
     }
 
     public function initAction (Request $request)
