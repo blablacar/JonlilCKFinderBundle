@@ -93,8 +93,12 @@
 
             var parentWindow = ( window.parent == window ) ? window.opener : window.parent;
             var full_url;
-            
-            config.basePath = config.basePath.substring(0,config.basePath.length - 1);
+
+            if (config.basePath == undefined) {
+                config.basePath = '';
+            } else {
+                config.basePath = config.basePath.substring(0,config.basePath.length - 1);
+            }
             switch ( action )
             {
                 case 'js':
