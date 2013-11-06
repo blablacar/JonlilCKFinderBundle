@@ -24,10 +24,14 @@ class s3 extends AbstractConnector
             }
         }
 
+        $base_url = preg_replace('/https*:\/\/(.*)\.amazonaws\.com.*/', '\1.amazonaws.com', $this->parameters['amazon']['base_url']);
+        $sslUse = preg_match('/https/', $this->parameters['amazon']['base_url']);
         $GLOBALS['config']['AmazonS3'] = array(
             'AccessKey' => $this->parameters['amazon']['access_key'],
             'SecretKey' => $this->parameters['amazon']['secret'],
-            'Bucket' => $this->parameters['amazon']['bucket']
+            'Bucket' => $this->parameters['amazon']['bucket'],
+            'BaseUrl' => $base_url,
+            'SslUse' => $sslUse
         );
 
         $GLOBALS['config']['LicenseName'] = $this->parameters['license']['name'];
