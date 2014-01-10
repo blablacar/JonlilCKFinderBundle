@@ -48,7 +48,8 @@ class JonlilCKFinderExtension extends Extension
                     'base_dir' => $config['baseDir'],
                     'thumbnails_file' => $config['thumbnailsFile'],
                     'thumbnails_enabled' => $config['thumbnailsEnabled'],
-                    'direct_access' => $config['directAccess']
+                    'direct_access' => $config['directAccess'],
+                    'file_delete' => $config['fileDelete']
                 ));
                 $container->setParameter('jonlil_ckfinder.baseDir', $config['baseDir']);
                 break;

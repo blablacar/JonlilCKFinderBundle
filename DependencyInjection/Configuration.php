@@ -40,6 +40,7 @@ class Configuration implements ConfigurationInterface
                 ->booleanNode('thumbnailsEnabled')->defaultTrue()->end()
                 ->booleanNode('thumbnailsFile')->defaultTrue()->end()
                 ->booleanNode('directAccess')->defaultTrue()->end()
+                ->booleanNode('fileDelete')->defaultTrue()->end()
                 ->scalarNode('baseDir')->end()
                 ->scalarNode('baseUrl')
                     ->isRequired()
