@@ -1,15 +1,16 @@
 {% form_theme form _self %}
 
 {% block ckfinder_widget %}
+
     {% spaceless %}
         <textarea {{ block('widget_attributes') }}>{{ value }}</textarea>
-        <iframe src="{{ url }}" width="0" height="0" frameborder="0" scrolling="no"></iframe>
+        <iframe src="{{ base_path }}" width="0" height="0" frameborder="0" scrolling="no"></iframe>
 
         <script type="text/javascript">
-            var CKEDITOR_BASEPATH = '{{ asset('bundles/ivoryckeditor/') | trim_asset_version }}';
+            var CKEDITOR_BASEPATH = '{{ base_path }}';
         </script>
 
-        <script type="text/javascript" src="{{ asset('bundles/ivoryckeditor/ckeditor.js') }}"></script>
+        <script type="text/javascript" src="{{ js_path }}"></script>
         <script type="text/javascript" src="{{ asset('bundles/jonlilckfinder/ckfinder.js') }}"></script>
 
         <script type="text/javascript">
@@ -19,27 +20,11 @@
             }
 
             {% for pluginName, plugin in plugins %}
-            CKEDITOR.plugins.addExternal('{{ pluginName }}', '{{ asset(plugin.path) | trim_asset_version }}', '{{ plugin.filename }}');
+                CKEDITOR.plugins.addExternal('{{ pluginName }}', '{{ asset(plugin.path) }}', '{{ plugin.filename }}');
             {% endfor %}
 
-            {% set config = config|merge({
-                'filebrowserBrowseUrl': url('ckfinder_index'),
-                'filebrowserImageBrowseUrl' : url('ckfinder_index', {'type': 'images'}),
-	            'filebrowserFlashBrowseUrl' : url('ckfinder_index', {'type': 'flash'}),
-	            'filebrowserUploadUrl' : url('ckfinder_init', {
-	                'command': 'quickUpload', 'type': 'files', 'service': 'php'
-                }),
-	            'filebrowserImageUploadUrl' : url('ckfinder_init', {
-	                'command': 'quickUpload', 'type': 'images', 'service': 'php'
-                }),
-	            'filebrowserFlashUploadUrl' : url('ckfinder_init', {
-	                'command': 'quickUpload', 'type': 'flash', 'service': 'php'
-                })
-            }) %}
-
-            var editor = CKEDITOR.replace( "{{ id }}"{% if config is not empty %}, {{ config | json_encode | raw }}{% endif %});
+            var editor = CKEDITOR.replace( "{{ id }}"{% if config is not empty %}, {{ config | raw }}{% endif %});
 
         </script>
-
     {% endspaceless %}
 {% endblock %}

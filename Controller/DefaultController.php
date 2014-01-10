@@ -13,8 +13,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-
-
 class DefaultController extends Controller
 {
     public function indexAction ()
@@ -24,15 +22,12 @@ class DefaultController extends Controller
 
     public function connectorAction (Request $request)
     {
-        return new Response('funka');
+        return new Response();
     }
 
     public function initAction (Request $request)
     {
-
-
         $connector = $this->get('jonlil_ckfinder.connector');
-
 
         return new Response();
     }

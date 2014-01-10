@@ -4,7 +4,7 @@
     <title>CKFinder</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="robots" content="noindex, nofollow" />
-    <script type="text/javascript" src="{{ asset('bundles/sonatajquery/jquery-1.8.3.js') }}"></script>
+    
     <script type="text/javascript" src="{{ asset('bundles/jonlilckfinder/ckfinder.js') }}"></script>
     <style type="text/css">
         body, html, iframe, #ckfinder {
@@ -92,9 +92,13 @@
                 action = get( 'action' );
 
             var parentWindow = ( window.parent == window ) ? window.opener : window.parent;
-            var full_url = '{{ url('home') }}';
-            config.basePath = full_url.replace(document.location.origin,'');
-            config.basePath = config.basePath.substring(0,config.basePath.length - 1);
+            var full_url;
+
+            if (config.basePath == undefined) {
+                config.basePath = '';
+            } else {
+                config.basePath = config.basePath.substring(0,config.basePath.length - 1);
+            }
             switch ( action )
             {
                 case 'js':
@@ -144,11 +148,7 @@
     })();
     //]]>
 
-    (function ($, window) {
-        $(document).ready(function () {
-            $('#ckfinder').css('visibility', 'visable');
-        });
-    })(jQuery, this);
+    
 </script>
 </body>
 </html>

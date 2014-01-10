@@ -49,6 +49,12 @@ jonlil_ck_finder:
     secret: ""
     bucket: ""
 ```
+
+There are also some optional parameters :
+"thumbnailsEnabled": if you want to display thumbnails on the different images
+"thumbnailsFile": to use a specific thumbnails to make a preview
+"directAccess": if you have a direct access to the file forthe preview
+
 ##### For usage with native php storage
 ```yaml
 jonlil_ck_finder:

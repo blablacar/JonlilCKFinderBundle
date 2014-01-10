@@ -34,6 +34,6 @@ function CheckAuthentication()
 }
 
 
-include_once __DIR__ . "/../../../../jonlil/ckfinder/plugins/imageresize/plugin.php";
-include_once __DIR__ . "/../../../../jonlil/ckfinder/plugins/fileeditor/plugin.php";
-include_once __DIR__ . "/../../../../jonlil/ckfinder/plugins/zip/plugin.php";
+include_once __DIR__ . "/../../jonlil/ckfinder/plugins/imageresize/plugin.php";
+include_once __DIR__ . "/../../jonlil/ckfinder/plugins/fileeditor/plugin.php";
+include_once __DIR__ . "/../../jonlil/ckfinder/plugins/zip/plugin.php";
