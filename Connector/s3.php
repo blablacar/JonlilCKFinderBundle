@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class s3 extends AbstractConnector
 {
-    private $mustHave = array('base_url', 'base_dir', 'access_key', 'secret', 'bucket', 'thumbnails_file', 'thumbnails_enabled', 'direct_access');
+    private $mustHave = array('base_url', 'base_dir', 'access_key', 'secret', 'bucket', 'thumbnails_file', 'thumbnails_enabled', 'direct_access', 'file_delete');
 
     protected function build_config ()
     {
@@ -70,7 +70,7 @@ class s3 extends AbstractConnector
             'fileView' => true,
             'fileUpload' => true,
             'fileRename' => true,
-            'fileDelete' => true
+            'fileDelete' => $this->parameters['amazon']['file_delete']
         );
 
         $GLOBALS['config']['DefaultResourceTypes'] = '';
