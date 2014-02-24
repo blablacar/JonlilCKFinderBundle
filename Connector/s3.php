@@ -14,7 +14,24 @@ use Symfony\Component\HttpFoundation\Request;
 
 class s3 extends AbstractConnector
 {
-    private $mustHave = array('base_url', 'base_dir', 'access_key', 'secret', 'bucket', 'thumbnails_file', 'thumbnails_enabled', 'direct_access', 'file_delete');
+    private $mustHave = array(
+        'base_url',
+        'base_dir',
+        'access_key',
+        'secret',
+        'bucket',
+        'thumbnails_file',
+        'thumbnails_enabled',
+        'direct_access',
+        'file_delete',
+        'file_view',
+        'file_upload',
+        'file_rename',
+        'folder_view',
+        'folder_create',
+        'folder_rename',
+        'folder_delete',
+    );
 
     protected function build_config ()
     {
@@ -62,14 +79,14 @@ class s3 extends AbstractConnector
             'resourceType' => '*',
             'folder' => '/',
 
-            'folderView' => true,
-            'folderCreate' => true,
-            'folderRename' => true,
-            'folderDelete' => true,
+            'folderView' => $this->parameters['amazon']['folder_view'],
+            'folderCreate' => $this->parameters['amazon']['folder_create'],
+            'folderRename' => $this->parameters['amazon']['folder_rename'],
+            'folderDelete' => $this->parameters['amazon']['folder_delete'],
 
-            'fileView' => true,
-            'fileUpload' => true,
-            'fileRename' => true,
+            'fileView' => $this->parameters['amazon']['file_view'],
+            'fileUpload' => $this->parameters['amazon']['file_upload'],
+            'fileRename' => $this->parameters['amazon']['file_rename'],
             'fileDelete' => $this->parameters['amazon']['file_delete']
         );
 

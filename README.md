@@ -58,7 +58,9 @@ There are also some optional parameters :
 
 "directAccess": if you have a direct access to the file forthe preview
 
-"fileDelete": if you want to prevent the file delete action on the server
+"fileDelete", "fileRename", "fileUpload", "fileView": if you want to prevent some file action
+
+"folderRename", "folderDelete", "folderCreate", "folderView": If you want to prevent some action on the folder
 
 ##### For usage with native php storage
 ```yaml
