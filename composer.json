@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "egeloen/ckeditor-bundle": "2.1.5",
+        "egeloen/ckeditor-bundle": "2.2-dev",
         "php": ">=5.3.0",
         "symfony/framework-bundle": ">=2.1",
         "jonlil/ckfinder": "2.3.1"
