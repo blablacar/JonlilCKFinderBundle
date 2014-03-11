@@ -15,6 +15,9 @@
         "symfony/framework-bundle": ">=2.1",
         "jonlil/ckfinder": "2.3.1"
     },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
     "autoload": {
         "psr-0": { "Jonlil\\CKFinderBundle": "" }
     },
