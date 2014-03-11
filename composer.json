@@ -13,10 +13,13 @@
         "egeloen/ckeditor-bundle": "2.2.*@dev",
         "php": ">=5.3.0",
         "symfony/framework-bundle": ">=2.1",
+        "symfony/assetic-bundle": ">=2.1",
         "jonlil/ckfinder": "2.3.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "*"
+        "phpunit/phpunit": "*",
+        "symfony/twig-bundle": ">=2.1",
+        "symfony/browser-kit":  ">=2.3,<2.4-dev"
     },
     "autoload": {
         "psr-0": { "Jonlil\\CKFinderBundle": "" }
