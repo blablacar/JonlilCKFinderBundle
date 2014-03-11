@@ -1,8 +1,9 @@
 framework:
-    secret: test
-    test:   ~
-    templating:      { engines: ['twig'] }
-    router:          { resource: "%kernel.root_dir%/config/routing.yml" }
+    secret:        test
+    form:          true
+    test:          ~
+    templating:    { engines: ['twig'] }
+    router:        { resource: "%kernel.root_dir%/config/routing.yml" }
 
 
 twig:
