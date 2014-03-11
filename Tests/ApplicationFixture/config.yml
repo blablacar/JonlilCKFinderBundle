@@ -12,8 +12,8 @@ twig:
 
 jonlil_ck_finder:
     baseUrl: "/userfiles/"  # path where your files will be stored
-#    license: # optional, can be used in demo mode also
-#        key: ""
-#        name: ""
-#    baseDir: "%assetic.read_from%"
-#    service: "php"
+    license: # optional, can be used in demo mode also
+        key: ""
+        name: ""
+    baseDir: "%assetic.read_from%"
+    service: "php"

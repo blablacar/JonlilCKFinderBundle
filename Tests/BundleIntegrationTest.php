@@ -14,6 +14,7 @@ class BundleIntegrationTest extends WebTestCase
         return new AppKernel('test', true);
     }
 
+
     /**
      * @test
      */
@@ -25,4 +26,19 @@ class BundleIntegrationTest extends WebTestCase
 
         $this->assertTrue($container->has('form.type.ckfinder'));
     }
+
+
+    /**
+     * @test
+     */
+    public function itAllowsTheCreationOfCkfinderForms()
+    {
+        $client = self::createClient();
+
+        $crawler = $client->request('GET', '/test/form');
+
+        $this->assertEquals(1, $crawler->filter('textarea#form_content')->count());
+        $this->assertEquals(1, $crawler->filter('iframe[src="bundles/ivoryckeditor/"]')->count());
+    }
+
 }
