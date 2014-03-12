@@ -41,4 +41,16 @@ class BundleIntegrationTest extends WebTestCase
         $this->assertEquals(1, $crawler->filter('iframe[src="bundles/ivoryckeditor/"]')->count());
     }
 
+    /**
+     * @test
+     */
+    public function itShowsTheProperJavascriptPaths()
+    {
+        $client = self::createClient();
+
+        $crawler = $client->request('GET', '/test/form');
+
+        $this->assertEquals(1, $crawler->filter('script[type="text/javascript"][src="/bundles/ivoryckeditor/ckeditor.js"]')->count());
+    }
+
 }
