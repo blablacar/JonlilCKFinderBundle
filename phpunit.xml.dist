@@ -12,7 +12,7 @@
 
     <testsuites>
         <testsuite name="JonlilCKFinderBundle Test Suite">
-            <directory>Tests/</directory>
+            <directory>Tests/Integration</directory>
         </testsuite>
     </testsuites>
 

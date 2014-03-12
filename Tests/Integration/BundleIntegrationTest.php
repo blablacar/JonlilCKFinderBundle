@@ -1,6 +1,6 @@
 <?php
 
-namespace Jonlil\CKFinderBundle\Tests;
+namespace Jonlil\CKFinderBundle\Tests\Integration;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
