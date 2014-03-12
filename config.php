@@ -16,6 +16,7 @@
  * This function must check the user session to be sure that he/she is
  * authorized to upload and access files in the File Browser.
  *
+ * @todo solve authentication
  * @return boolean
  */
 function CheckAuthentication()
@@ -34,6 +35,6 @@ function CheckAuthentication()
 }
 
 
-include_once __DIR__ . "/../../jonlil/ckfinder/plugins/imageresize/plugin.php";
-include_once __DIR__ . "/../../jonlil/ckfinder/plugins/fileeditor/plugin.php";
-include_once __DIR__ . "/../../jonlil/ckfinder/plugins/zip/plugin.php";
+include_once __DIR__ . "/../../../ckfinder/plugins/imageresize/plugin.php";
+include_once __DIR__ . "/../../../ckfinder/plugins/fileeditor/plugin.php";
+include_once __DIR__ . "/../../../ckfinder/plugins/zip/plugin.php";

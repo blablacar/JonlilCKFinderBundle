@@ -110,7 +110,7 @@ abstract class AbstractConnector
         $GLOBALS['config']['DefaultResourceTypes'] = '';
 
         $GLOBALS['config']['ResourceType'][] = Array(
-            'name' => 'Files',				// Single quotes not allowed
+            'name' => 'files',				// Single quotes not allowed
             'url' => $this->request->getBasePath().$this->parameters['baseUrl'] . 'files',
             'directory' => $this->parameters['baseDir'] . $this->parameters['baseUrl'] . 'files',
             'maxSize' => 0,
@@ -119,7 +119,7 @@ abstract class AbstractConnector
         );
 
         $GLOBALS['config']['ResourceType'][] = Array(
-            'name' => 'Images',
+            'name' => 'images',
             'url' => $this->request->getBasePath().$this->parameters['baseUrl'] . 'images',
             'directory' => $this->parameters['baseDir'] . $this->parameters['baseUrl'] . 'images',
             'maxSize' => 0,
@@ -128,7 +128,7 @@ abstract class AbstractConnector
         );
 
         $GLOBALS['config']['ResourceType'][] = Array(
-            'name' => 'Flash',
+            'name' => 'flash',
             'url' => $this->request->getBasePath().$this->parameters['baseUrl'] . 'flash',
             'directory' => $this->parameters['baseDir'] . $this->parameters['baseUrl'] . 'flash',
             'maxSize' => 0,

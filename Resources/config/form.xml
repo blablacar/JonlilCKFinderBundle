@@ -17,8 +17,8 @@
             <argument>%ivory_ck_editor.form.type.js_path%</argument>
             <argument type="service" id="ivory_ck_editor.config_manager" />
             <argument type="service" id="ivory_ck_editor.plugin_manager" />
-            <argument type="service" id="templating.helper.assets" />
-            <argument type="service" id="ivory_ck_editor.helper.assets_version_trimer" />
+            <argument type="service" id="ivory_ck_editor.styles_set_manager" />
+            <argument type="service" id="ivory_ck_editor.template_manager" />
             <tag name="form.type" alias="ckfinder" />
             <call method="setRouter">
                 <argument type="service" id="router" />

@@ -1,0 +1,19 @@
+framework:
+    secret:        test
+    form:          true
+    test:          ~
+    templating:    { engines: ['twig'] }
+    router:        { resource: "%kernel.root_dir%/config/routing.yml" }
+
+
+twig:
+    debug:            %kernel.debug%
+    strict_variables: %kernel.debug%
+
+jonlil_ck_finder:
+    baseUrl: "/userfiles/"  # path where your files will be stored
+    license: # optional, can be used in demo mode also
+        key: ""
+        name: ""
+    baseDir: "%assetic.read_from%"
+    service: "php"

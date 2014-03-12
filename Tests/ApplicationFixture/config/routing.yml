@@ -1,0 +1,7 @@
+ck_finder:
+    resource: "@JonlilCKFinderBundle/Resources/config/routing/routing.yml"
+    prefix: /ckfinder
+
+test_form:
+    path:  /test/form
+    defaults: { _controller: Jonlil\CKFinderBundle\Tests\ApplicationFixture\Controller\TestController::formAction }

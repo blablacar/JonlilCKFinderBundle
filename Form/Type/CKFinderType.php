@@ -33,17 +33,17 @@ class CKFinderType extends CKEditorType
 	            'filebrowserImageBrowseUrl' => $this->router->generate('ckfinder_index', array('type' => 'images')),
 	            'filebrowserFlashBrowseUrl' => $this->router->generate('ckfinder_index', array('type' => 'flash')),
 	            'filebrowserUploadUrl' => $this->router->generate('ckfinder_init', array(
-	                'command' => 'quickUpload', 
+	                'command' => 'QuickUpload', 
 	                'type' => 'files', 
 	                'service' => 'php'
 	            )),
 	            'filebrowserImageUploadUrl' => $this->router->generate('ckfinder_init', array(
-	                'command' => 'quickUpload', 
+	                'command' => 'QuickUpload', 
 	                'type' => 'images', 
 	                'service' => 'php'
 	            )),
 	            'filebrowserFlashUploadUrl' => $this->router->generate('ckfinder_init', array(
-	        		'command' => 'quickUpload', 
+	        		'command' => 'QuickUpload', 
 	        		'type' => 'flash', 
 	        		'service' => 'php'
 	        	))
