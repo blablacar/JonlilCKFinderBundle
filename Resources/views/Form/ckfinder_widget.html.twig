@@ -4,10 +4,10 @@
 
     {% spaceless %}
         <textarea {{ block('widget_attributes') }}>{{ value }}</textarea>
-        <iframe src="{{ base_path }}" width="0" height="0" frameborder="0" scrolling="no"></iframe>
+        <iframe src="{{ asset(base_path) }}" width="0" height="0" frameborder="0" scrolling="no"></iframe>
 
         <script type="text/javascript">
-            var CKEDITOR_BASEPATH = '{{ base_path }}';
+            var CKEDITOR_BASEPATH = '{{ asset(base_path) }}';
         </script>
 
         <script type="text/javascript" src="{{ asset(js_path) }}"></script>
