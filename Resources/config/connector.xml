@@ -10,18 +10,6 @@
     </parameters>
 
     <services>
-<!--         <service id="jonlil.ckfinder.connector.s3" class="Jonlil\CKFinderBundle\Connector\s3">
-            <argument type="service" id="request" strict="false" />
-            <argument type="collection">
-                <argument key="baseDir">%jonlil_ckfinder.baseDir%</argument>
-                <argument key="baseUrl">%jonlil_ckfinder.baseUrl%</argument>
-                <argument key="path">%jonlil.ckfinder.path%</argument>
-                <argument key="license">%jonlil_ckfinder.license%</argument>
-                <argument key="connector">/core/connector/s3/</argument>
-                <argument key="amazon">%jonlil_ckfinder.amazon%</argument>
-            </argument>
-        </service>
- -->
         <service id="jonlil.ckfinder.connector.php" class="Jonlil\CKFinderBundle\Connector\php">
             <argument type="service" id="request" strict="false" />
             <argument type="collection">

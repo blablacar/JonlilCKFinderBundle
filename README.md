@@ -1,7 +1,7 @@
 #### JonlilCKFinderBundle
 
-For documentation on CKFinder http://cksource.com/ckfinder    
-If you planing to configure ckeditor a little bit more :) https://github.com/egeloen/IvoryCKEditorBundle
+- Check out the [documentation on CKFinder](http://cksource.com/ckfinder).
+- If you plan to configure ckeditor a little bit more, look at the [IvoryCKeditorBundle](https://github.com/egeloen/IvoryCKEditorBundle).
 
 1) Installation
 -------------------------
@@ -89,8 +89,17 @@ public function buildForm (FormBuilderInterface $builder, array $options)
 }
 ```
 
-4) Todos
+4) Testing
+---------------------------
+This bundle provides a set of integration tests you should run whenever you make changes in the source code.
+
+- Git clone the bundle.
+- Execute `composer update`
+- Run `php vendor/bin/phpunit`
+
+5) Todos
 ---------------------------
 Fix amazon s3 thumbnails - Refer to this project https://github.com/jonlil/ckfinder
 
+Security should be managed in `CheckAuthentication()`. Look at the `config.php` file for further details.
 
