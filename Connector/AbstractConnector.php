@@ -190,7 +190,12 @@ abstract class AbstractConnector
 
         define('CKFINDER_CONNECTOR_DEFAULT_USER_FILES_PATH', $this->parameters['baseDir'] . $this->parameters['baseUrl']);
         define('CKFINDER_CONNECTOR_LANG_PATH', $this->parameters['path'] . $this->parameters['connector'] . "lang");
-        define('CKFINDER_CONNECTOR_CONFIG_FILE_PATH', __DIR__ . "/../config.php");
+
+        if(isset($this->parameters['configPath']) && !empty($this->parameters['configPath'])){
+            define('CKFINDER_CONNECTOR_CONFIG_FILE_PATH', $this->parameters['configPath']);
+        }else{
+            define('CKFINDER_CONNECTOR_CONFIG_FILE_PATH', __DIR__ . "/../config.php");
+        }
 
         if (version_compare(phpversion(), '6', '>=')) {
             define('CKFINDER_CONNECTOR_PHP_MODE', 6);
