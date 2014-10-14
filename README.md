@@ -81,6 +81,7 @@ parameters:
     jonlil.ckfinder.configPath: %kernel.root_dir%/...path your custom config.php
 ```
 copy the config.php from the bundle into your project and adjust the function CheckAuthentication() accordingly
+
 adjust the 3 plugin paths in the bottom of the config.php
 
 
