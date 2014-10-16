@@ -73,6 +73,26 @@ jonlil_ck_finder:
     service: "php"
 ```
 
+##### Authentication
+```yaml
+# app/config/config.yml
+
+parameters:
+    jonlil.ckfinder.customAuthentication: %kernel.root_dir%/...path your custom config.php or any other file
+```
+Write your own function CheckAuthentication() in your custom config.php 
+
+Examlple:
+
+```php
+function CheckAuthentication()
+{
+	isset($_SESSION['IsAuthorized']) && $_SESSION['IsAuthorized'];
+
+}
+```
+
+
 3) Usage
 --------------------------
 ```php
