@@ -78,11 +78,19 @@ jonlil_ck_finder:
 # app/config/config.yml
 
 parameters:
-    jonlil.ckfinder.customAuthentication: %kernel.root_dir%/...path your custom config.php
+    jonlil.ckfinder.customAuthentication: %kernel.root_dir%/...path your custom config.php or any other file
 ```
-copy the config.php from the bundle into your project and adjust the function CheckAuthentication() accordingly
+Write your own function CheckAuthentication() in your custom config.php 
 
-adjust the 3 plugin paths in the bottom of the config.php
+Examlple:
+
+```php
+function CheckAuthentication()
+{
+	isset($_SESSION['IsAuthorized']) && $_SESSION['IsAuthorized'];
+
+}
+```
 
 
 3) Usage
