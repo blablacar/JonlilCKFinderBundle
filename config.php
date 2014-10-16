@@ -26,7 +26,8 @@ if(defined('CKFINDER_CONNECTOR_CUSTOM_AUTHENTICATION'))
 	require_once CKFINDER_CONNECTOR_CUSTOM_AUTHENTICATION;
 }
 
-if (!function_exists('CheckAuthentication')) {
+if (!function_exists('CheckAuthentication')) 
+{
         
     function CheckAuthentication()
     {
