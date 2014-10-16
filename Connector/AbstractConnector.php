@@ -194,7 +194,7 @@ abstract class AbstractConnector
        	if(isset($this->parameters['customAuthentication']) && !empty($this->parameters['customAuthentication'])){
 			define('CKFINDER_CONNECTOR_CUSTOM_AUTHENTICATION', $this->parameters['customAuthentication']);
 		}
-		define('CKFINDER_CONNECTOR_CONFIG_FILE_PATH', __DIR__ . "/../config.php");
+	define('CKFINDER_CONNECTOR_CONFIG_FILE_PATH', __DIR__ . "/../config.php");
 
         if (version_compare(phpversion(), '6', '>=')) {
             define('CKFINDER_CONNECTOR_PHP_MODE', 6);
