@@ -18,7 +18,7 @@
                 <argument key="baseDir">%assetic.read_from%</argument>
                 <argument key="license">%jonlil_ckfinder.license%</argument>
                 <argument key="connector">/core/connector/php/</argument>
-                <argument key="configPath">%jonlil.ckfinder.configPath%</argument>
+                <argument key="customAuthentication">%jonlil.ckfinder.customAuthentication%</argument>
             </argument>
         </service>
     </services>
