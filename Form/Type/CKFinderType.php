@@ -27,28 +27,28 @@ class CKFinderType extends CKEditorType
     {
     	parent::setDefaultOptions($resolver);
 
-    	$resolver->replaceDefaults(array(
+    	$resolver->setDefaults(array(
     		'config' => array(
 	            'filebrowserBrowseUrl' => $this->router->generate('ckfinder_index'),
 	            'filebrowserImageBrowseUrl' => $this->router->generate('ckfinder_index', array('type' => 'images')),
 	            'filebrowserFlashBrowseUrl' => $this->router->generate('ckfinder_index', array('type' => 'flash')),
 	            'filebrowserUploadUrl' => $this->router->generate('ckfinder_init', array(
-	                'command' => 'QuickUpload', 
-	                'type' => 'files', 
+	                'command' => 'QuickUpload',
+	                'type' => 'files',
 	                'service' => 'php'
 	            )),
 	            'filebrowserImageUploadUrl' => $this->router->generate('ckfinder_init', array(
-	                'command' => 'QuickUpload', 
-	                'type' => 'images', 
+	                'command' => 'QuickUpload',
+	                'type' => 'images',
 	                'service' => 'php'
 	            )),
 	            'filebrowserFlashUploadUrl' => $this->router->generate('ckfinder_init', array(
-	        		'command' => 'QuickUpload', 
-	        		'type' => 'flash', 
+	        		'command' => 'QuickUpload',
+	        		'type' => 'flash',
 	        		'service' => 'php'
 	        	))
-        	))
-		);
+        	)
+        ));
     }
 
     public function getName()
