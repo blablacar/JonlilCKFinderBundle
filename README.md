@@ -7,6 +7,7 @@
 -------------------------
 
 Add the following line in the `require` section of your `composer.json`:
+
 for using CKEditor 4.4.6 and greater:
 ```json
 "jonlil/ckfinder-bundle": "3.*"
@@ -17,6 +18,7 @@ for using CKEditor 4.4.5 and less:
 "jonlil/ckfinder-bundle": "2.*"
 ```
 
+Register the bundle in the `app/AppKernel.php`:
 ```php
 public function registerBundles()
 {
