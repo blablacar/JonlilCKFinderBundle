@@ -6,12 +6,19 @@
 1) Installation
 -------------------------
 
+Add the following line in the `require` section of your `composer.json`:
+
+for using CKEditor 4.4.6 and greater:
 ```json
-"require": {
-    "jonlil/ckfinder-bundle": "dev-master"
-}
+"jonlil/ckfinder-bundle": "3.*"
 ```
 
+for using CKEditor 4.4.5 and less:
+```json
+"jonlil/ckfinder-bundle": "2.*"
+```
+
+Register the bundle in the `app/AppKernel.php`:
 ```php
 public function registerBundles()
 {
