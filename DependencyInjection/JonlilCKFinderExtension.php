@@ -45,6 +45,7 @@ class JonlilCKFinderExtension extends Extension
                     'bucket' => $config['bucket'],
                     'access_key' => $config['accessKey'],
                     'base_url' => $config['baseUrl'],
+                    'proxy' => $config['proxy'],
                     'base_dir' => $config['baseDir'],
                     'thumbnails_file' => $config['thumbnailsFile'],
                     'thumbnails_enabled' => $config['thumbnailsEnabled'],

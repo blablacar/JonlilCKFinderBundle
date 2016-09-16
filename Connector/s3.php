@@ -16,6 +16,7 @@ class s3 extends AbstractConnector
 {
     private $mustHave = array(
         'base_url',
+        'proxy',
         'base_dir',
         'access_key',
         'secret',
@@ -48,6 +49,7 @@ class s3 extends AbstractConnector
             'SecretKey' => $this->parameters['amazon']['secret'],
             'Bucket' => $this->parameters['amazon']['bucket'],
             'BaseUrl' => $base_url,
+            'Proxy' => $this->parameters['amazon']['proxy'],
             'SslUse' => $sslUse
         );
 

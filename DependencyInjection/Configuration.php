@@ -49,6 +49,7 @@ class Configuration implements ConfigurationInterface
                 ->booleanNode('folderCreate')->defaultTrue()->end()
                 ->booleanNode('folderView')->defaultTrue()->end()
                 ->scalarNode('baseDir')->end()
+                ->scalarNode('proxy')->defaultNull()->end()
                 ->scalarNode('baseUrl')
                     ->isRequired()
                     ->cannotBeEmpty()
